@@ -120,6 +120,14 @@ function Lower () {
     128
     )
 }
+function left () {
+    sensors.DDMmotor(
+    AnalogPin.P15,
+    0,
+    AnalogPin.P16,
+    128
+    )
+}
 function Raise () {
     sensors.DDMmotor(
     AnalogPin.P13,
