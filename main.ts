@@ -16,10 +16,10 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
         Raise()
         basic.showLeds(`
             . . # . .
+            # # # # #
             . # . # .
-            # . . . #
-            . . . . .
-            . . . . .
+            . # # # .
+            . # # # .
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -28,11 +28,11 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
     if (receivedNumber == 2) {
         Lower()
         basic.showLeds(`
-            . . . . .
-            . . . . .
-            # . . . #
-            . # . # .
-            . . # . .
+            # # . # #
+            # . # . .
+            # . # # #
+            # . # # #
+            # . # # #
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -42,10 +42,10 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
         left()
         basic.showLeds(`
             . . # . .
-            . # . . .
-            # . . . .
-            . # . . .
-            . . # . .
+            # # # # #
+            . # # # #
+            . # . # .
+            # . # # #
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -55,10 +55,10 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
         right()
         basic.showLeds(`
             . . # . .
-            . . . # .
-            . . . . #
-            . . . # .
-            . . # . .
+            # # # # #
+            . # . . .
+            . # . # #
+            . # . # #
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -67,11 +67,11 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
     if (receivedNumber == 1) {
         Front()
         basic.showLeds(`
-            . . # . .
             . # . # .
-            # . . . #
-            . . . . .
-            . . # . .
+            # # # # #
+            # # . # #
+            # # . # #
+            # # . # #
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -80,11 +80,11 @@ radio.onReceivedNumber(function on_received_number(receivedNumber: number) {
     if (receivedNumber == 3) {
         Back()
         basic.showLeds(`
-            . . # . .
-            . . . . .
-            # . . . #
-            . # . # .
-            . . # . .
+            # # # # #
+            # . . . .
+            # . # # #
+            # . # . #
+            # . # # #
             `)
         basic.pause(50)
         basic.clearScreen()
