@@ -161,6 +161,9 @@ function stop () {
     0
     )
 }
+function Open () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
+}
 function Back () {
     sensors.DDMmotor(
     AnalogPin.P12,
@@ -176,5 +179,8 @@ function Front () {
     AnalogPin.P2,
     0
     )
+}
+function Close () {
+    pins.digitalWritePin(DigitalPin.P0, 0)
 }
 radio.setGroup(1)
