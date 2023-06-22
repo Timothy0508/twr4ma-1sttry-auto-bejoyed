@@ -89,6 +89,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.clearScreen()
     }
     if (receivedNumber == 7) {
+        Open()
         basic.showLeds(`
             . . # . .
             . . . # .
@@ -100,6 +101,7 @@ radio.onReceivedNumber(function (receivedNumber) {
         basic.clearScreen()
     }
     if (receivedNumber == 9) {
+        Close()
         basic.showLeds(`
             . . # . .
             . # . . .
