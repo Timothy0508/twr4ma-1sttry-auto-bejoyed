@@ -9,7 +9,6 @@ def right():
 # 7向左轉F
 # 9向右轉D
 # 0停止
-# 
 
 def on_received_number(receivedNumber):
     if receivedNumber == 8:
@@ -120,8 +119,8 @@ def Raise():
 def stop():
     sensors.dd_mmotor(AnalogPin.P13, 0, AnalogPin.P14, 0)
     sensors.dd_mmotor(AnalogPin.P15, 0, AnalogPin.P16, 0)
-radio.set_group(1)
-def Front():
-    sensors.dd_mmotor(AnalogPin.P12, 0, AnalogPin.P2, 0)
 def Back():
     sensors.dd_mmotor(AnalogPin.P12, 0, AnalogPin.P2, 0)
+def Front():
+    sensors.dd_mmotor(AnalogPin.P12, 0, AnalogPin.P2, 0)
+radio.set_group(1)
