@@ -91,11 +91,11 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 7) {
         Open()
         basic.showLeds(`
-            . . # . .
-            . . . # .
-            # . . . #
-            . . . # .
-            . . # . .
+            # # # # #
+            . # . # .
+            # # # # #
+            . # . # .
+            . # . # .
             `)
         basic.pause(50)
         basic.clearScreen()
@@ -103,11 +103,11 @@ radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 9) {
         Close()
         basic.showLeds(`
+            . # . # .
+            # # # # #
             . . # . .
-            . # . . .
-            # . . . #
-            . # . . .
-            . . # . .
+            # # # # #
+            . # . # .
             `)
         basic.pause(50)
         basic.clearScreen()
