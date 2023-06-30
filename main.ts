@@ -162,6 +162,12 @@ function stop () {
     AnalogPin.P16,
     0
     )
+    sensors.DDMmotor(
+    AnalogPin.P12,
+    0,
+    AnalogPin.P2,
+    0
+    )
 }
 function Open () {
     pins.digitalWritePin(DigitalPin.P8, 120)
@@ -171,15 +177,15 @@ function Back () {
     AnalogPin.P12,
     0,
     AnalogPin.P2,
-    0
+    128
     )
 }
 function Front () {
     sensors.DDMmotor(
     AnalogPin.P12,
-    0,
+    1,
     AnalogPin.P2,
-    0
+    128
     )
 }
 function Close () {
