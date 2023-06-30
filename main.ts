@@ -170,7 +170,7 @@ function stop () {
     )
 }
 function Open () {
-    pins.digitalWritePin(DigitalPin.P8, 120)
+    pins.servoWritePin(AnalogPin.P0, 180)
 }
 function Back () {
     sensors.DDMmotor(
@@ -189,6 +189,6 @@ function Front () {
     )
 }
 function Close () {
-    pins.digitalWritePin(DigitalPin.P8, 0)
+    pins.servoWritePin(AnalogPin.P0, 0)
 }
 radio.setGroup(1)
