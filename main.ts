@@ -170,7 +170,7 @@ function stop () {
     )
 }
 function Open () {
-    pins.servoWritePin(AnalogPin.P1, 180)
+    pins.servoWritePin(AnalogPin.P1, 120)
 }
 function Back () {
     sensors.DDMmotor(
