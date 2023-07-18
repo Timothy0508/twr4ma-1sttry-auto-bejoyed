@@ -126,12 +126,7 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 function Lower () {
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    0,
-    AnalogPin.P14,
-    128
-    )
+    pins.servoWritePin(AnalogPin.P8, 0)
 }
 function left () {
     sensors.DDMmotor(
@@ -142,20 +137,9 @@ function left () {
     )
 }
 function Raise () {
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    1,
-    AnalogPin.P14,
-    128
-    )
+    pins.servoWritePin(AnalogPin.P8, 180)
 }
 function stop () {
-    sensors.DDMmotor(
-    AnalogPin.P13,
-    0,
-    AnalogPin.P14,
-    0
-    )
     sensors.DDMmotor(
     AnalogPin.P15,
     0,
@@ -168,9 +152,10 @@ function stop () {
     AnalogPin.P2,
     0
     )
+    pins.servoWritePin(AnalogPin.P8, 90)
 }
 function Open () {
-    pins.servoWritePin(AnalogPin.P1, 120)
+    pins.servoWritePin(AnalogPin.P1, 20)
 }
 function Back () {
     sensors.DDMmotor(
