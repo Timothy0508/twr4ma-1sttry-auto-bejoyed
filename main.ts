@@ -3,7 +3,7 @@ function right () {
     AnalogPin.P15,
     1,
     AnalogPin.P16,
-    128
+    96
     )
 }
 // 8上升
@@ -133,7 +133,7 @@ function left () {
     AnalogPin.P15,
     0,
     AnalogPin.P16,
-    128
+    96
     )
 }
 function Raise () {
@@ -155,7 +155,10 @@ function stop () {
     pins.servoWritePin(AnalogPin.P8, 90)
 }
 function Open () {
-    pins.servoWritePin(AnalogPin.P1, 20)
+    if (degree <= 160) {
+        degree += 20
+        pins.servoWritePin(AnalogPin.P1, degree)
+    }
 }
 function Back () {
     sensors.DDMmotor(
@@ -174,6 +177,12 @@ function Front () {
     )
 }
 function Close () {
-    pins.servoWritePin(AnalogPin.P1, 0)
+    if (degree >= 20) {
+        degree += -20
+        pins.servoWritePin(AnalogPin.P1, degree)
+    }
 }
+let degree = 0
+degree = 0
+pins.servoWritePin(AnalogPin.P1, degree)
 radio.setGroup(1)
