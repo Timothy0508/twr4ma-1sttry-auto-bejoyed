@@ -153,12 +153,10 @@ function stop () {
     0
     )
     pins.servoWritePin(AnalogPin.P8, 90)
+    pins.servoWritePin(AnalogPin.P1, 90)
 }
 function Open () {
-    if (degree <= 160) {
-        degree += 20
-        pins.servoWritePin(AnalogPin.P1, degree)
-    }
+    pins.servoWritePin(AnalogPin.P1, 180)
 }
 function Back () {
     sensors.DDMmotor(
@@ -177,12 +175,8 @@ function Front () {
     )
 }
 function Close () {
-    if (degree >= 20) {
-        degree += -20
-        pins.servoWritePin(AnalogPin.P1, degree)
-    }
+    pins.servoWritePin(AnalogPin.P1, 0)
 }
 let degree = 0
-degree = 0
 pins.servoWritePin(AnalogPin.P1, degree)
 radio.setGroup(1)
