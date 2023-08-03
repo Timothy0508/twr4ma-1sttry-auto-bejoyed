@@ -18,111 +18,30 @@ function right () {
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 8) {
         Raise()
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . . . #
-            . . . . .
-            . . . . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 2) {
         Lower()
-        basic.showLeds(`
-            . . . . .
-            . . . . .
-            # . . . #
-            . # . # .
-            . . # . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 4) {
         left()
-        basic.showLeds(`
-            . . # . .
-            . # . . .
-            # . . . .
-            . # . . .
-            . . # . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 6) {
         right()
-        basic.showLeds(`
-            . . # . .
-            . . . # .
-            . . . . #
-            . . . # .
-            . . # . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 1) {
         Front()
-        basic.showLeds(`
-            . . # . .
-            . # . # .
-            # . . . #
-            . . . . .
-            . . # . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 3) {
         Back()
-        basic.showLeds(`
-            . . # . .
-            . . . . .
-            # . . . #
-            . # . # .
-            . . # . .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 7) {
         Open()
-        basic.showLeds(`
-            # # # # #
-            . # . # .
-            # # # # #
-            . # . # .
-            . # . # .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 9) {
         Close()
-        basic.showLeds(`
-            . # . # .
-            # # # # #
-            . . # . .
-            # # # # #
-            . # . # .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
     if (receivedNumber == 0) {
         stop()
-        basic.showLeds(`
-            . # # # .
-            # # . . #
-            # . # . #
-            # . . # #
-            . # # # .
-            `)
-        basic.pause(50)
-        basic.clearScreen()
     }
 })
 function Lower () {
@@ -179,4 +98,4 @@ function Close () {
 }
 let degree = 0
 pins.servoWritePin(AnalogPin.P1, degree)
-radio.setGroup(1)
+radio.setGroup(103)
